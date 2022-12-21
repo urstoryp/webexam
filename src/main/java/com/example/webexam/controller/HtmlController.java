@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller // html 을 응답
 public class HtmlController {
     @GetMapping("/hello")
-    @ResponseBody // 잘 사용하지 않는다.
+//    @ResponseBody // 잘 사용하지 않는다.
     public String hello() {
-        return "<html><body><h1>Hello World!</h1></body></html>"; // 템플릿 이름을 보통.
+        return "list"; // 뷰이름. 사용자가 요청을 보낼때 json을 달라, html을 달라. header정보.
     }
+
 }
